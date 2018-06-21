@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <base href="https://www.w3schools.com/w3css/">
+    <style>
+        .banner{
+            position: relative;
+            width:800px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .gallery-wrap{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* border-radius: 100%; */
+            overflow: hidden;
+            height: 360px;
+            position: relative;
+        }
+        .gallery-wrap>*{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: 0.9s;
+            opacity: 0;
+        }
+        .gallery-wrap>*.current{
+            opacity: 1;
+        }
+        .gallery-wrap>li{
+            background-size: cover;
+        }
+        .gallery-wrap>li>p{
+            font-size: 40px;
+            background: rgba(255, 255, 255, 0.35);
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            transition: 0.8s;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(3);
+            margin: 0;
+            padding: 20px 30px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+        }
+        .gallery-wrap>li.current>p{
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0s;
+        }
+        .arrow{
+            font-size: 0px;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            cursor: pointer;
+            padding: 12px;
+            /* background: #333; */
+        }
+        .arrow:before {
+            border: solid #fff;
+            content: "";
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 11px;
+        }
+
+        .arrow.next {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            right: 20px;
+        }
+
+        .arrow.prev {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+    <ul class="gallery-wrap">
+            <li class="item" style="background-image: url(img_snowtops.jpg)">
+                <p>1</p>
+            </li>
+            <li class="item" style="background-image: url(img_lights.jpg)">
+                <p>2</p>
+            </li>
+            <li class="item" style="background-image: url(img_mountains.jpg)">
+                <p>3</p>
+            </li>
+            <li class="item" style="background-image: url(img_forest.jpg)">
+                <p>4</p>
+            </li>
+        </ul>
+        <a class="arrow prev">Prev</a>
+        <a class="arrow next">Next</a>
+    </div>
+    <script>
+
+        let slideImages = document.querySelectorAll(".gallery-wrap>li"),
+            prev = document.querySelector(".prev"),
+            next = document.querySelector(".next"),
+            current = 0;
+
+            function reset() {
+                for (let i = 0; i < slideImages.length; i++) {
+                    slideImages[i].classList.remove("current");
+                }
+            }
+            function startSlide() {
+                slideImages[0].classList.add("current");
+            }
+            function slidePrev() {
+                reset();
+                slideImages[current - 1].classList.add("current");
+                current--;
+            }
+            prev.addEventListener('click', function () {
+                if (current === 0) {
+                    current = slideImages.length;
+                }
+                slidePrev();
+            })
+            function slideNext() {
+                reset();
+                slideImages[current + 1].classList.add("current");
+                current++;
+            }
+            next.addEventListener('click', function(){
+                if (current === slideImages.length - 1) {
+                    current = - 1;
+                }
+                slideNext();
+            })
+            startSlide();
+        console.log(slideImages);
+    </script>
+</body>
+</html>
