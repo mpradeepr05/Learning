@@ -85,23 +85,23 @@
 </head>
 <body>
     <div class="banner">
-    <ul class="gallery-wrap">
-            <li class="item" style="background-image: url(img_snowtops.jpg)">
-                <p>1</p>
-            </li>
-            <li class="item" style="background-image: url(img_lights.jpg)">
-                <p>2</p>
-            </li>
-            <li class="item" style="background-image: url(img_mountains.jpg)">
-                <p>3</p>
-            </li>
-            <li class="item" style="background-image: url(img_forest.jpg)">
-                <p>4</p>
-            </li>
-        </ul>
-        <a class="arrow prev">Prev</a>
-        <a class="arrow next">Next</a>
-    </div>
+        <ul class="gallery-wrap">
+                <li class="item" style="background-image: url(img_snowtops.jpg)">
+                    <p>1</p>
+                </li>
+                <li class="item" style="background-image: url(img_lights.jpg)">
+                    <p>2</p>
+                </li>
+                <li class="item" style="background-image: url(img_mountains.jpg)">
+                    <p>3</p>
+                </li>
+                <li class="item" style="background-image: url(img_forest.jpg)">
+                    <p>4</p>
+                </li>
+            </ul>
+            <a class="arrow prev">Prev</a>
+            <a class="arrow next">Next</a>
+        </div>
     <script>
 
         let slideImages = document.querySelectorAll(".gallery-wrap>li"),
@@ -114,6 +114,7 @@
                     slideImages[i].classList.remove("current");
                 }
             }
+            
             function startSlide() {
                 slideImages[0].classList.add("current");
             }
