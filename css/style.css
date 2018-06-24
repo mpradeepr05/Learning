@@ -295,7 +295,6 @@ overflow:visible;
 	#mainmenu li {
 	margin: 0px 0px;
 	padding: 0px 0px;
-	float: left;
 	display: inline;
 	list-style: none;
 	position: relative;
@@ -992,7 +991,6 @@ border:solid 1px #ddd;
 	.dropcap {
 	display: inline-block;
 	font-size: 48px;
-	float: left;
 	margin: 10px 15px 15px 0;
 	color:#eceff3;
 	padding: 20px 10px 20px 10px;
@@ -3780,7 +3778,6 @@ background-size:cover;
 /* quick-search */
 .quick-search {
 display: inline-block;
-float: right;
 margin-left: 10px;
 padding: 10px 0 0 0;
 }
