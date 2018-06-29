@@ -109,6 +109,25 @@
             next = document.querySelector(".next"),
             current = 0;
 
+
+            autoSlide();
+            function autoSlide() {
+                if (current < slideImages.length) {
+                    reset();
+                    slideImages[current++].classList.add("current");
+                }else{
+                    current = 0;
+                }
+                setTimeout("autoSlide()", 5000);
+            }
+
+            // setInterval(autoSlide, 1000)
+            
+
+
+
+
+
             function reset() {
                 for (let i = 0; i < slideImages.length; i++) {
                     slideImages[i].classList.remove("current");
@@ -118,28 +137,31 @@
             function startSlide() {
                 slideImages[0].classList.add("current");
             }
-            function slidePrev() {
-                reset();
-                slideImages[current - 1].classList.add("current");
-                current--;
-            }
+            
             prev.addEventListener('click', function () {
                 if (current === 0) {
-                    current = slideImages.length;
+                    current = slideImages.length;current
                 }
                 slidePrev();
             })
-            function slideNext() {
+            function slidePrev() {
                 reset();
-                slideImages[current + 1].classList.add("current");
-                current++;
+                slideImages[ - 1].classList.add("current");
+                current--;
             }
+
             next.addEventListener('click', function(){
                 if (current === slideImages.length - 1) {
                     current = - 1;
                 }
                 slideNext();
             })
+            function slideNext() {
+                console.log(current);
+                reset();
+                slideImages[current + 1].classList.add("current");
+                current++;
+            }
             startSlide();
         console.log(slideImages);
     </script>
