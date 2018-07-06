@@ -1377,7 +1377,7 @@ border:solid 1px #ddd;
 	border-radius:0;
 	-moz-border-radius:0;
 	-webkit-border-radius:0;
-	padding:3px;
+	padding:10px;
 	padding-left:30px;
 	padding-right:30px;
 	text-transform:uppercase;
@@ -4917,7 +4917,8 @@ display:table;
 	-webkit-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.4);
 	-moz-box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.4);
 	box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.4);
-	background-size: 230%;
+	background-size: cover;
+    background-position: center;
 }
 
 .overflow-hidden{

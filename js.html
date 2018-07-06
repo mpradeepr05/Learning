@@ -99,71 +99,64 @@
                     <p>4</p>
                 </li>
             </ul>
-            <a class="arrow prev">Prev</a>
-            <a class="arrow next">Next</a>
+            <a class="arrow prev" onclick="plusIndex(-1)">Prev</a>
+            <a class="arrow next" onclick="plusIndex(1)">Next</a>
         </div>
     <script>
 
-        let slideImages = document.querySelectorAll(".gallery-wrap>li"),
-            prev = document.querySelector(".prev"),
-            next = document.querySelector(".next"),
-            current = 0;
+        var index = 1;
 
+        function plusIndex(n) {
+            index = index + 1;
+            showImages(index);
+        }
 
-            autoSlide();
-            function autoSlide() {
-                if (current < slideImages.length) {
-                    reset();
-                    slideImages[current++].classList.add("current");
-                }else{
-                    current = 0;
-                }
-                setTimeout("autoSlide()", 5000);
+        showImages(1);
+
+        function showImages(n) {
+            var i;
+            var x = document.getElementsByClassName("item");
+            if(n > x.length){index = 1};
+            if(n < 1){index = x.length};
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("current");
             }
+            x[index-1].classList.add("current");
+        }
 
-            // setInterval(autoSlide, 1000)
-            
-
-
-
-
-
-            function reset() {
-                for (let i = 0; i < slideImages.length; i++) {
-                    slideImages[i].classList.remove("current");
-                }
+        
+        autoSlide();
+        function autoSlide() {
+            var i;
+            var x = document.getElementsByClassName("item");
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("current"); 
             }
-            
-            function startSlide() {
-                slideImages[0].classList.add("current");
-            }
-            
-            prev.addEventListener('click', function () {
-                if (current === 0) {
-                    current = slideImages.length;current
-                }
-                slidePrev();
-            })
-            function slidePrev() {
-                reset();
-                slideImages[ - 1].classList.add("current");
-                current--;
-            }
+            if (index > x.length) {index = 1}
+            x[index-1].classList.add("current");
+            index++;
+            setTimeout(autoSlide, 2000);
+        }
 
-            next.addEventListener('click', function(){
-                if (current === slideImages.length - 1) {
-                    current = - 1;
-                }
-                slideNext();
-            })
-            function slideNext() {
-                console.log(current);
-                reset();
-                slideImages[current + 1].classList.add("current");
-                current++;
-            }
-            startSlide();
-        console.log(slideImages);
+        // function isScrolledIntoView(elem) {
+        //     var docViewTop = $(window).scrollTop();
+        //     var docViewBottom = docViewTop + $(window).height();
+
+        //     var elemTop = $(elem).offset().top;
+        //     var elemBottom = elemTop + $(elem).height();
+
+        //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        // }
+
+        // $(window).scroll(function () {
+        //     $('.class').each(function () {
+        //         if (isScrolledIntoView(this) === true) {
+        //             $(this).addClass('in-view')
+        //         }
+        //     });
+
+        // });
+        
     </script>
 </body>
 </html>
