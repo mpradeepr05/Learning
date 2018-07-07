@@ -92,6 +92,7 @@ address span strong,
 .de_form input[type="radio"]:checked + label:before,
 .de_form input[type="checkbox"]:checked + label:before,
 #mainmenu li:hover > a,
+#mainmenu li.active > a,
 .expand h4:after
 {
 	color:#FE4365;

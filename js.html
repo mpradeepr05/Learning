@@ -84,7 +84,7 @@
     </style>
 </head>
 <body>
-    <div class="banner">
+    <div class="banner" style="display: none;">
         <ul class="gallery-wrap">
                 <li class="item" style="background-image: url(img_snowtops.jpg)">
                     <p>1</p>
@@ -102,60 +102,114 @@
             <a class="arrow prev" onclick="plusIndex(-1)">Prev</a>
             <a class="arrow next" onclick="plusIndex(1)">Next</a>
         </div>
+        <style>
+            body, html{height: 100%;}
+            .main-menu{
+                position: fixed;
+                top: 0;
+                z-index: 2;
+            }
+            .main-menu li {
+                display: inline-block;
+                padding: 10px;
+                cursor: pointer;
+            }
+            .main-menu li.active a {
+                color: red;
+            }
+            section{
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: 0.4;
+                transition: 0.6s;
+                transition-delay: 0.3s;
+            }
+            section.in-view{
+                opacity: 1;
+            }
+            section:nth-of-type(2){background: red;}
+            section:nth-of-type(3){background: green;}
+            section:nth-of-type(4){background: blue;}
+            section:nth-of-type(5){background: orange;}
+        </style>
+        <nav id="nav">
+            <ul id="main-menu" class="col-sm-8 main-menu" ng-click="vm.onNavClick($event)">
+                <li class="active"><a onclick='scrollToEele("home")' data="home">Home</a></li>
+                <li><a onclick='scrollToEele("aboutus")' data="aboutus">About artist</a></li>
+                <li><a onclick='scrollToEele("art-work")' data="art-work">Art Works</a></li>
+                <li><a onclick='scrollToEele("activates")' data="activates">Other Projects</a></li>
+                <li><a onclick='scrollToEele("gallery")' data="gallery">Gallery</a></li>
+            </ul>
+        </nav>
+        <section id="home">1</section><section id="aboutus">2</section><section id="art-work">3</section><section id="activates">4</section><section id="gallery">5</section>
+
     <script>
+        var menuUl = document.getElementById("main-menu");
+        var mHeight = document.getElementById("nav").clientHeight;
+        var x = menuUl.querySelectorAll('ul li');
+        function scrollToEele(id) {
+            // vm.closeModal();
+            var secId = document.getElementById(id).offsetTop;
+            window.scroll({top: secId - mHeight, left: 0, behavior: 'smooth'});
+        }
+        window.onscroll = function(){
+            var scrollPosY = window.pageYOffset | document.body.scrollTop;
+            console.log(scrollPosY)
 
-        var index = 1;
-
-        function plusIndex(n) {
-            index = index + 1;
-            showImages(index);
+            var x = menuUl.querySelectorAll('li');
+            for (var i = 0; i < x.length; i++) {
+                var picId = x[i].querySelector('a').getAttribute('data');
+                var offsetTop = document.getElementById(picId).offsetTop;
+                var secHeight = document.getElementById(picId).clientHeight;
+                if (offsetTop - scrollPosY - mHeight <= 3){
+                    x[i].className = "active";
+                }
+                else{x[i].className = "";}
+                if (offsetTop - scrollPosY - mHeight + secHeight <= 0){
+                    x[i].className = "";
+                }
+                if (offsetTop - scrollPosY - secHeight <= 0){
+                    document.getElementById(picId).className = "in-view";
+                }
+                // console.log(picId);
+            };
         }
 
-        showImages(1);
 
-        function showImages(n) {
-            var i;
-            var x = document.getElementsByClassName("item");
-            if(n > x.length){index = 1};
-            if(n < 1){index = x.length};
-            for (i = 0; i < x.length; i++) {
-                x[i].classList.remove("current");
-            }
-            x[index-1].classList.add("current");
-        }
+        // var index = 1;
 
-        
-        autoSlide();
-        function autoSlide() {
-            var i;
-            var x = document.getElementsByClassName("item");
-            for (i = 0; i < x.length; i++) {
-                x[i].classList.remove("current"); 
-            }
-            if (index > x.length) {index = 1}
-            x[index-1].classList.add("current");
-            index++;
-            setTimeout(autoSlide, 2000);
-        }
-
-        // function isScrolledIntoView(elem) {
-        //     var docViewTop = $(window).scrollTop();
-        //     var docViewBottom = docViewTop + $(window).height();
-
-        //     var elemTop = $(elem).offset().top;
-        //     var elemBottom = elemTop + $(elem).height();
-
-        //     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        // function plusIndex(n) {
+        //     index = index + 1;
+        //     showImages(index);
         // }
 
-        // $(window).scroll(function () {
-        //     $('.class').each(function () {
-        //         if (isScrolledIntoView(this) === true) {
-        //             $(this).addClass('in-view')
-        //         }
-        //     });
+        // showImages(1);
 
-        // });
+        // function showImages(n) {
+        //     var i;
+        //     var x = document.getElementsByClassName("item");
+        //     if(n > x.length){index = 1};
+        //     if(n < 1){index = x.length};
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].classList.remove("current");
+        //     }
+        //     x[index-1].classList.add("current");
+        // }
+
+        
+        // autoSlide();
+        // function autoSlide() {
+        //     var i;
+        //     var x = document.getElementsByClassName("item");
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].classList.remove("current"); 
+        //     }
+        //     if (index > x.length) {index = 1}
+        //     x[index-1].classList.add("current");
+        //     index++;
+        //     setTimeout(autoSlide, 2000);
+        // }
         
     </script>
 </body>
