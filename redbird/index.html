@@ -32,7 +32,7 @@
     </div>
     <div id="wrapper">
         <!-- header begin -->
-        <header class="transparent header-light">
+        <header class="transparent header-light" id="header">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -471,6 +471,16 @@
         //     };
         // }
 
+        window.onscroll = function(){
+            var scrollPosY = window.pageYOffset | document.body.scrollTop;
+            var headerFx = document.getElementById("header");
+            if (scrollPosY > 100) {
+                headerFx.classList.add("headerfx")
+            }
+            else{
+                headerFx.classList.remove("headerfx")
+            }
+        }
         
 
 
