@@ -14,6 +14,8 @@
     
 // }
 
+
+
 // for (let i = 1; i < 20; i++) {
 //     if (i%2===0) {
 //         console.log(i+" this number is even")
@@ -22,5 +24,20 @@
 //         console.log(i+" this number is odd")
 //     }
 // }
+
+
+
+
+function isPalindrome(str) {
+    var splitString = str.split("")
+    var reverseArray = splitString.reverse().join("");
+    if (str === reverseArray) {
+        console.log("true");
+    }
+    else{
+        console.log("false");
+    }
+}
+isPalindrome("ABCBA");
 
 

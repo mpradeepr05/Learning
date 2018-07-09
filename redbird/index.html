@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Archi - Responsive Interior Design Template</title>
+    <title>redbird</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Archi is best selling interior design website template with responsive stunning design">
-    <meta name="keywords" content="architecture,building,business,bootstrap,creative,exterior design,furniture design,gallery,garden design,house,interior design,landscape design,multipurpose,onepage,portfolio,studio">
+    <meta name="description" content="redbird is best selling interior design website template with responsive stunning design">
+    <meta name="keywords" content="redbirdtecture,building,business,bootstrap,creative,exterior design,furniture design,gallery,garden design,house,interior design,landscape design,multipurpose,onepage,portfolio,studio">
     <meta name="author" content="">
 
 
@@ -18,36 +17,20 @@
     <!-- CSS Files
     ================================================== -->
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <!-- <link rel="stylesheet" href="css/jpreloader.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="css/animate.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="css/plugin.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="css/owl.carousel.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="css/owl.theme.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="css/owl.transitions.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="css/magnific-popup.css" type="text/css"> -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="demo/demo.css" type="text/css">
 
     <!-- custom background -->
     <link rel="stylesheet" href="css/bg.css" type="text/css">
 
     <!-- color scheme -->
     <link rel="stylesheet" href="css/color.css" type="text/css" id="colors">
-
-    <!-- load fonts -->
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css" type="text/css">
-    <link rel="stylesheet" href="fonts/et-line-font/style.css" type="text/css">
-
-    <!-- revolution slider -->
-    <link rel="stylesheet" href="rs-plugin/css/settings.css" type="text/css">
-    <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
 </head>
 
-<body id="homepage">
-
+<body id="homepage" onload="myFunction()">
+    <div id="loader">
+        <div class="spinner" data-layer="4" style=""><div class="spinner-container"><div class="spinner-rotator"><div class="spinner-left"><div class="spinner-circle"></div></div><div class="spinner-right"><div class="spinner-circle"></div></div></div></div></div>
+    </div>
     <div id="wrapper">
-
         <!-- header begin -->
         <header class="transparent header-light">
             <div class="container">
@@ -191,16 +174,39 @@
 
             <!-- revolution slider begin -->
             <section id="section-welcome-7" class="text-light" data-speed="3" data-type="background">
-
-                <div class="center-y text-center">
-                    <div class="spacer-double"></div>
-                    <h1 class="title">Bring <strong class="id-color">Magic</strong> to home</h1>
-                    <div class="spacer-single"></div>
-                    <a href="contact.html" class="btn-slider scroll-to">Hire Us Now</a>
-                    <div class="spacer-double"></div>
+                <div class="banner">
+                    <ul class="gallery-wrap">
+                        <li class="item" style="background-image: url(images/1.jpg)">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1 class="title">Bring <strong class="id-color">Magic</strong> to home</h1>
+                                    <p class="small">OUR EXPERTISE FOR</p>
+                                    <a href="contact.html" class="btn-slider scroll-to">Hire Us Now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" style="background-image: url(images/2.jpg)">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1 class="title">Bring <strong class="id-color">Magic</strong> to home</h1>
+                                    <p class="small">OUR EXPERTISE FOR</p>
+                                    <a href="contact.html" class="btn-slider scroll-to">Hire Us Now</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item" style="background-image: url(images/3.jpg)">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1 class="title">Bring <strong class="id-color">Magic</strong> to home</h1>
+                                    <p class="small">OUR EXPERTISE FOR</p>
+                                    <a href="contact.html" class="btn-slider scroll-to">Hire Us Now</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="arrow prev" onclick="plusIndex(-1)">Prev</a>
+                    <a class="arrow next" onclick="plusIndex(1)">Next</a>
                 </div>
-
-
             </section>
             <!-- revolution slider close -->
 
@@ -210,7 +216,7 @@
                     <div class="row mt-70">
 
                         <div class="col-md-4 text-middle text-light wow fadeInRight">
-                            <div class="shadow-soft" data-bgimage="url(images/8.png)">
+                            <div class="shadow-soft" style="background-image:url(images/8.png)">
                                 <div class="padding40 overlay60">
                                     <h3>International Pilot</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
@@ -220,7 +226,7 @@
                         </div>
 
                         <div class="col-md-4 text-middle text-light wow fadeInRight">
-                            <div class="shadow-soft" data-bgimage="url(images/2.jpg)">
+                            <div class="shadow-soft" style="background-image:url(images/2.jpg)">
                                 <div class="padding40 overlay60">
                                     <h3>Aircraft Engs.</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
@@ -230,7 +236,7 @@
                         </div>
 
                         <div class="col-md-4 text-middle text-light wow fadeInRight">
-                            <div class="shadow-soft" data-bgimage="url(images/6.jpg)">
+                            <div class="shadow-soft" style="background-image:url(images/6.jpg)">
                                 <div class="padding40 overlay60">
                                     <h3>Commercial Pilot</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
@@ -350,294 +356,6 @@
                 </div>
             </section>
             <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-typing" aria-label="section-typing" class="padding40 bg-color text-dark">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <div class="typing-wrap">
-                                We do
-                            <div class="typed-strings">
-                                <p>Residential Design</p>
-                                <p>Office Design</p>
-                                <p>Hospitaly Design</p>
-                                <p>Commercial Design</p>
-                            </div>
-                                <span class="typed"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-portfolio-2" class="no-top" aria-label="section-portfolio">
-                <div class="container">
-
-                    <div class="spacer-single"></div>
-
-                    <!-- portfolio filter begin -->
-                    <div class="row">
-                        <div class="col-md-12 mt40">
-                            <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
-                                <li class="pull-right"><a href="#" data-filter="*" class="selected">All Projects</a></li>
-                                <li><a href="#" data-filter=".residential">Residential</a></li>
-                                <li><a href="#" data-filter=".hospitaly">Hospitaly</a></li>
-                                <li><a href="#" data-filter=".office">Office</a></li>
-                                <li><a href="#" data-filter=".commercial">Commercial</a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <!-- portfolio filter close -->
-
-                    <div class="spacer-single"></div>
-
-                    <div id="gallery" class="row grid_gallery gallery de-gallery hover-1 wow fadeInUp" data-wow-delay=".3s">
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item residential">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-1.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Eco Green Interior</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="images/portfolio/pf%20(1).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item hospitaly">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-2.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Modern Elegance Suite</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="images/portfolio/pf%20(2).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item hospitaly">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-3.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Apartment Renovation</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="images/portfolio/pf%20(3).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item residential">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-youtube.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Youtube Video</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="images/portfolio/pf%20(4).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item office">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-vimeo.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Vimeo Video</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="images/portfolio/pf%20(5).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item commercial">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Restaurant In Texas</span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <img src="images/portfolio/pf%20(6).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item residential">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-youtube.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Summer House</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="images/portfolio/pf%20(7).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item office">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-vimeo.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Office On Space</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="images/portfolio/pf%20(8).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                        <!-- gallery item -->
-                        <div class="col-md-4 item office">
-                            <div class="picframe">
-                                <a class="simple-ajax-popup-align-top" href="project-details-youtube.html">
-                                    <span class="overlay-1">
-                                        <span class="pf_text">
-                                            <span class="project-name">Luxury Living Room</span>
-                                        </span>
-                                    </span>
-                                </a>
-
-                                <img src="images/portfolio/pf%20(9).jpg" alt="" />
-                            </div>
-                        </div>
-                        <!-- close gallery item -->
-
-                    </div>
-
-                </div>
-
-                <div id="loader-area">
-                    <div class="project-load"></div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-custom-2" class="text-light">
-                <div class="container">
-                    <div class="row">
-                        <ul id="blog-carousel" class="blog-list blog-snippet wow fadeInUp">
-                            <li class="col-md-6 item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img src="images/blog/pic-blog-1.jpg" alt="" />
-                                    </div>
-
-
-                                    <div class="date-box">
-                                        <div class="day">26</div>
-                                        <div class="month">FEB</div>
-                                    </div>
-
-                                    <div class="post-text">
-                                        <h3><a href="css/#">5 Things That Take a Room from Good to Great</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="col-md-6 item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img src="images/blog/pic-blog-2.jpg" alt="" />
-                                    </div>
-
-
-                                    <div class="date-box">
-                                        <div class="day">20</div>
-                                        <div class="month">FEB</div>
-                                    </div>
-
-                                    <div class="post-text">
-                                        <h3><a href="css/#">Functional and Stylish Wall-to-Wall Shelves</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="col-md-6 item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img src="images/blog/pic-blog-3.jpg" alt="" />
-                                    </div>
-
-
-                                    <div class="date-box">
-                                        <div class="day">16</div>
-                                        <div class="month">FEB</div>
-                                    </div>
-
-                                    <div class="post-text">
-                                        <h3><a href="css/#">The 5 Secrets to Pulling Off Simple, Minimal Design</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                                    </div>
-
-                                </div>
-                            </li>
-
-                            <li class="col-md-6 item">
-                                <div class="post-content">
-                                    <div class="post-image">
-                                        <img src="images/blog/pic-blog-4.jpg" alt="" />
-                                    </div>
-
-
-                                    <div class="date-box">
-                                        <div class="day">08</div>
-                                        <div class="month">FEB</div>
-                                    </div>
-
-                                    <div class="post-text">
-                                        <h3><a href="css/#">How to Make a Huge Impact With Multiples</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                                    </div>
-
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-
         </div>
 
         <!-- footer begin -->
@@ -646,7 +364,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <img src="images/logo.png" class="logo-small" alt=""><br>
-                        We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                        We are team based on Brookylin. Our expertise on Interior Design. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi redbirdtecto beatae vitae dicta sunt explicabo. 
                     </div>
 
                     <div class="col-md-4">
@@ -669,8 +387,8 @@
                                 <span>100 Mainstreet Center, Sydney</span>
                                 <span><strong>Phone:</strong>(208) 333 9296</span>
                                 <span><strong>Fax:</strong>(208) 333 9298</span>
-                                <span><strong>Email:</strong><a href="mailto:contact@archi-interior.com">contact@archi-interior.com</a></span>
-                                <span><strong>Web:</strong><a href="#">http://archi-interior.com</a></span>
+                                <span><strong>Email:</strong><a href="mailto:contact@redbird-interior.com">contact@redbird-interior.com</a></span>
+                                <span><strong>Web:</strong><a href="#">http://redbird-interior.com</a></span>
                             </address>
                         </div>
                     </div>
@@ -681,7 +399,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            &copy; Copyright 2018 - Archi Interior Design Template by <span class="id-color">Designesia</span>
+                            &copy; Copyright 2018 - redbird Interior Design Template by <span class="id-color">Designesia</span>
                         </div>
                         <div class="col-md-6 text-right">
                             <div class="social-icons">
@@ -701,26 +419,84 @@
         <!-- footer close -->
     </div>
 
-    <!-- style switcher
-    ================================================== -->
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jquery.min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jpreLoader.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/bootstrap.min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jquery.isotope.min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/easing.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jquery.flexslider-min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jquery.scrollto.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/owl.carousel.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jquery.countTo.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/classie.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/video.resize.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/validation.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/wow.min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/jquery.magnific-popup.min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/enquire.min.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/js/designesia.js"></script>
-    <script src="http://www.themenesia.com/themeforest/archi-light/demo/demo.js"></script>
+    <script>
+        var index = 1;
+        function plusIndex(n) {
+            index = index + 1;
+            showImages(index);
+        }
+
+        showImages(1);
+
+        function showImages(n) {
+            var i;
+            var x = document.querySelectorAll(".banner .item");
+            if(n > x.length){index = 1};
+            if(n < 1){index = x.length};
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("current");
+            }
+            x[index-1].classList.add("current");
+        }
+
+
+        // scroll animation
+
+
+        // var menuUl = document.getElementById("mainmenu");
+        // var mHeight = document.getElementById("header").clientHeight;
+        // var x = menuUl.querySelectorAll('ul li');
+        // function scrollToEele(id) {
+        //     var secId = document.getElementById(id).offsetTop;
+        //     window.scroll({top: secId - mHeight, left: 0, behavior: 'smooth'});
+        // }
+        // window.onscroll = function(){
+        //     var scrollPosY = window.pageYOffset | document.body.scrollTop;
+        //     var x = menuUl.querySelectorAll('li');
+        //     for (var i = 0; i < x.length; i++) {
+        //         var picId = x[i].querySelector('a').getAttribute('data');
+        //         var offsetTop = document.getElementById(picId).offsetTop;
+        //         var secHeight = document.getElementById(picId).clientHeight;
+        //         if (offsetTop - scrollPosY - mHeight <= 3){
+        //             x[i].className = "active";
+        //         }
+        //         else{x[i].className = "";}
+        //         if (offsetTop - scrollPosY - mHeight + secHeight <= 0){
+        //             x[i].className = "";
+        //         }
+        //         var animSect = document.querySelectorAll(".wow");
+        //         if (offsetTop - scrollPosY - secHeight <= 0){
+        //             document.getElementById(picId).classList.add("in-view");
+        //         }
+        //     };
+        // }
+
+        
+
+
+        function myFunction() {
+            setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").className = "complete";
+            document.getElementById("wrapper").style.display = "block";
+
+
+            autoSlide();
+            function autoSlide() {
+                var i;
+                var x = document.querySelectorAll(".banner .item");
+                for (i = 0; i < x.length; i++) {
+                    x[i].classList.remove("current"); 
+                }
+                if (index > x.length) {index = 1}
+                x[index-1].classList.add("current");
+                index++;
+                setTimeout(autoSlide, 4000);
+            }
+        }
+    </script>
+    
 </body>
 </html>
