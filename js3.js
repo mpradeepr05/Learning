@@ -28,16 +28,31 @@
 
 
 
-function isPalindrome(str) {
-    var splitString = str.split("")
-    var reverseArray = splitString.reverse().join("");
-    if (str === reverseArray) {
-        console.log("true");
+// function isPalindrome(str) {
+//     var splitString = str.split("")
+//     var reverseArray = splitString.reverse().join("");
+//     if (str === reverseArray) {
+//         console.log("true");
+//     }
+//     else{
+//         console.log("false");
+//     }
+// }
+// isPalindrome("ABCBA");
+
+
+var array = ("122")
+
+for (let i = 0; i < array.length-1; i++) {
+    for (let j = 0; j < array.length; j++) {
+        if (array[i] == array[j]) {
+            console.log("true");
+            // console.log(array[i]+"="+array[j])
+        }
     }
-    else{
-        console.log("false");
-    }
+    // if (arrSplit[i] == arrSplit[i+1]) {
+    //     console.log(arrSplit[i]+arrSplit[i+1])
+    // }
 }
-isPalindrome("ABCBA");
 
 

@@ -3668,7 +3668,7 @@ font-size:20px;
 .wow.fadeInRight{transform: translateX(100px);}
 .wow.fadeInDown{transform: translateX(-100px);}
 .wow.delay-06{transition-delay: 0.6s;}
-.in-view .wow{
+.wow.in-view{
 	transform: translate(0px,0px) !important;
 	opacity: 1;
     visibility: visible;

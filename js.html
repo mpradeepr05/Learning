@@ -7,6 +7,10 @@
     <title>Document</title>
     <base href="https://www.w3schools.com/w3css/">
     <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
         .banner{
             position: relative;
             width:800px;
@@ -84,24 +88,6 @@
     </style>
 </head>
 <body>
-    <div class="banner" style="display: none;">
-        <ul class="gallery-wrap">
-                <li class="item" style="background-image: url(img_snowtops.jpg)">
-                    <p>1</p>
-                </li>
-                <li class="item" style="background-image: url(img_lights.jpg)">
-                    <p>2</p>
-                </li>
-                <li class="item" style="background-image: url(img_mountains.jpg)">
-                    <p>3</p>
-                </li>
-                <li class="item" style="background-image: url(img_forest.jpg)">
-                    <p>4</p>
-                </li>
-            </ul>
-            <a class="arrow prev" onclick="plusIndex(-1)">Prev</a>
-            <a class="arrow next" onclick="plusIndex(1)">Next</a>
-        </div>
         <style>
             body, html{height: 100%;}
             .main-menu{
@@ -120,18 +106,55 @@
             section{
                 height: 100%;
                 width: 100%;
-                background: #000;
-                opacity: 0.4;
+                position: relative;
+            }
+            section:before{
+                content: "";
+                background: #999;
+                position: absolute;
+                height: 100%;
+                left: 0;
+                width: 100%;
+                opacity: 0.1;
                 transition: 0.6s;
                 transition-delay: 0.3s;
             }
-            section.in-view{
-                opacity: 1;
+            section:after {
+                opacity: 0.8;
+                clear: both;
+                content: "";
+                display: block;
             }
-            section:nth-of-type(2){background: red;}
-            section:nth-of-type(3){background: green;}
-            section:nth-of-type(4){background: blue;}
-            section:nth-of-type(5){background: orange;}
+            section.in-view:before{
+                opacity: 0.8;
+            }
+            .wow{
+                width: 200px; margin-top: 100px; position: relative; height: 200px; margin-left: 5px; border:2px #000 solid; float: left;
+            }
+            .in-view.wow{
+                border-color:red;
+                background: red;
+            }
+            section:nth-of-type(2):before{background: red;}
+            section:nth-of-type(3):before{background: green;}
+            section:nth-of-type(4):before{background: blue;}
+            section:nth-of-type(5):before{background: orange;}
+            .demo{
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            .demo>span{
+                padding: 3px 10px;
+                border-radius: 40px;
+                background: #000;
+                color: #fff;
+                transition: 2s;
+                max-width: 200px;
+            }
+            .demo>span:empty{
+                display: none;
+            }
         </style>
         <nav id="nav">
             <ul id="main-menu" class="col-sm-8 main-menu" ng-click="vm.onNavClick($event)">
@@ -142,75 +165,63 @@
                 <li><a onclick='scrollToEele("gallery")' data="gallery">Gallery</a></li>
             </ul>
         </nav>
-        <section id="home">1</section><section id="aboutus">2</section><section id="art-work">3</section><section id="activates">4</section><section id="gallery">5</section>
-
+        <section id="home">Home</section><section id="aboutus">About us</section>
+        <section id="art-work">Art Works
+            <div id="ab" class="wow"></div>
+            <div class="wow"></div>
+            <div class="wow"></div>
+        </section>
+        <section id="activates">Other Works</section><section id="gallery">Gallery</section>
+        <div class="demo">
+            <span id="demo"></span>
+            <span id="demo1"></span>
+            <span id="demo2"></span>
+            <span id="demo3"></span>
+        </div>
     <script>
-        var menuUl = document.getElementById("main-menu");
-        var mHeight = document.getElementById("nav").clientHeight;
-        var x = menuUl.querySelectorAll('ul li');
-        function scrollToEele(id) {
-            // vm.closeModal();
-            var secId = document.getElementById(id).offsetTop;
-            window.scroll({top: secId - mHeight, left: 0, behavior: 'smooth'});
-        }
+        // var menuUl = document.getElementById("main-menu");
+        // var mHeight = document.getElementById("nav").clientHeight;
+        // var x = menuUl.querySelectorAll('ul li');
+        // function scrollToEele(id) {
+        //     var secId = document.getElementById(id).offsetTop;
+        //     window.scroll({top: secId - mHeight, left: 0, behavior: 'smooth'});
+        // }
+        // window.onscroll = function(){
+        //     var scrollPosY = window.pageYOffset | document.body.scrollTop;
+        //     var x = menuUl.querySelectorAll('li');
+        //     for (var i = 0; i < x.length; i++) {
+        //         var picId = x[i].querySelector('a').getAttribute('data');
+        //         var offsetTop = document.getElementById(picId).offsetTop;
+        //         var secHeight = document.getElementById(picId).clientHeight;
+        //         if (offsetTop - scrollPosY - mHeight <= 3){
+        //             x[i].className = "active";
+        //         }
+        //         else{x[i].className = "";}
+        //         if (offsetTop - scrollPosY - mHeight + secHeight <= 0){
+        //             x[i].className = "";
+        //         }
+        //     };
+
+            
+        // }
         window.onscroll = function(){
             var scrollPosY = window.pageYOffset | document.body.scrollTop;
-            console.log(scrollPosY)
-
-            var x = menuUl.querySelectorAll('li');
-            for (var i = 0; i < x.length; i++) {
-                var picId = x[i].querySelector('a').getAttribute('data');
-                var offsetTop = document.getElementById(picId).offsetTop;
-                var secHeight = document.getElementById(picId).clientHeight;
-                if (offsetTop - scrollPosY - mHeight <= 3){
-                    x[i].className = "active";
+            var ab = document.getElementById("ab").offsetParent.offsetTop;
+            var abc = document.getElementById("ab").offsetTop;
+            document.getElementById("demo").innerHTML = scrollPosY;
+            document.getElementById("demo1").innerHTML = ab;
+            document.getElementById("demo2").innerHTML = abc+ab-scrollPosY-window.innerHeight;
+            var secId = document.getElementsByClassName("wow")
+            for (var i = 0; i < secId.length; i++) {
+                var xyz = secId[i]
+                var xb = xyz.offsetTop
+                var xy = xyz.offsetParent.offsetTop
+                console.log(xy)
+                if (xb+xy-scrollPosY-window.innerHeight <= 0){
+                    xyz.classList.add("in-view");
                 }
-                else{x[i].className = "";}
-                if (offsetTop - scrollPosY - mHeight + secHeight <= 0){
-                    x[i].className = "";
-                }
-                if (offsetTop - scrollPosY - secHeight <= 0){
-                    document.getElementById(picId).className = "in-view";
-                }
-                // console.log(picId);
-            };
+            }
         }
-
-
-        // var index = 1;
-
-        // function plusIndex(n) {
-        //     index = index + 1;
-        //     showImages(index);
-        // }
-
-        // showImages(1);
-
-        // function showImages(n) {
-        //     var i;
-        //     var x = document.getElementsByClassName("item");
-        //     if(n > x.length){index = 1};
-        //     if(n < 1){index = x.length};
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].classList.remove("current");
-        //     }
-        //     x[index-1].classList.add("current");
-        // }
-
-        
-        // autoSlide();
-        // function autoSlide() {
-        //     var i;
-        //     var x = document.getElementsByClassName("item");
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].classList.remove("current"); 
-        //     }
-        //     if (index > x.length) {index = 1}
-        //     x[index-1].classList.add("current");
-        //     index++;
-        //     setTimeout(autoSlide, 2000);
-        // }
-        
     </script>
 </body>
 </html>

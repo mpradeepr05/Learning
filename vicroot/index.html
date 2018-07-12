@@ -1341,18 +1341,23 @@
                 if (offsetTop - scrollPosY - mHeight + secHeight <= 0){
                     x[i].className = "";
                 }
-                var animSect = document.querySelectorAll(".wow");
-                // console.log(animSect);
-                if (offsetTop - scrollPosY - secHeight <= 0){
-                    document.getElementById(picId).classList.add("in-view");
-                }
             };
+            
+
+            // Animation view on page scroll
+
+            var secId = document.getElementsByClassName("wow")
+            for (var i = 0; i < secId.length; i++) {
+                var xyz = secId[i]
+                var xb = xyz.offsetTop
+                var xy = xyz.offsetParent.offsetTop
+                if (xb+xy-scrollPosY-window.innerHeight + 50 <= 0){
+                    xyz.classList.add("in-view");
+                }
+            }
         }
 
-        // Loader body
 
-        // var body = document.getElementsByTagName("body")[0];
-        // body.addEventListener("load", myFunction(), false);
 
 
         function myFunction() {
@@ -1364,18 +1369,18 @@
             document.getElementById("wrapper").style.display = "block";
 
 
-            // autoSlide();
-            // function autoSlide() {
-            //     var i;
-            //     var x = document.querySelectorAll(".banner .item");
-            //     for (i = 0; i < x.length; i++) {
-            //         x[i].classList.remove("current"); 
-            //     }
-            //     if (index > x.length) {index = 1}
-            //     x[index-1].classList.add("current");
-            //     index++;
-            //     setTimeout(autoSlide, 4000);
-            // }
+            autoSlide();
+            function autoSlide() {
+                var i;
+                var x = document.querySelectorAll(".banner .item");
+                for (i = 0; i < x.length; i++) {
+                    x[i].classList.remove("current"); 
+                }
+                if (index > x.length) {index = 1}
+                x[index-1].classList.add("current");
+                index++;
+                setTimeout(autoSlide, 4000);
+            }
         }
 
     </script>
