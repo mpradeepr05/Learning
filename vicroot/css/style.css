@@ -39,7 +39,7 @@ overflow:visible;
 	-ms-transition: height 0.3s;
 	-o-transition: height 0.3s;
 	transition: height 0.3s;
-	background:#18191b;
+	background:#fff;
 	border-bottom:solid 1px rgba(0,0,0,0.0);
 	}
 	
@@ -302,23 +302,27 @@ overflow:visible;
 		
 	#mainmenu a {
 	display: inline-block;
-	padding: 25px 0px 25px 20px;
-	line-height: 35px;
-	text-decoration: none;
-	text-align:center;
-	outline:none;
+    padding: 4px 9px;
+    line-height: 19px;
+    text-decoration: none;
+    text-align: center;
+    outline: none;
+    margin:26px 10px;
+    border-radius: 180px;
 	}
 	
 	#mainmenu a,
 	header.transparent.header-light #mainmenu a{
-	color:#fff;
+	color:#333;
 	cursor: pointer;
 	}
 	
 	#mainmenu li a:after {
 		float:right; position:relative;
 		content:"\25CF"; font-size:9px;
-		margin-left:20px; margin-top:0px; color:#FAB702;
+		margin-top:0px; color:#FAB702;
+		position: absolute;
+		right: -9px;
 	}
 	
 	#mainmenu li:last-child a:after{display:none;}
@@ -326,6 +330,10 @@ overflow:visible;
 	#mainmenu.no-separator li a:after{
 	font-size:0px;
 	}	
+
+	li:hover > a, #mainmenu li.active > a {
+		box-shadow: inset 0px 0px 0px 1px #b5b5b533;
+	}
 	
 	#mainmenu.line-separator li a:after{
 	content:"/";

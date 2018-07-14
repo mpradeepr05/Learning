@@ -85,16 +85,24 @@ overflow:visible;
 	transition: height 0.3s;
 	background:#18191b;
 	border-bottom:solid 1px rgba(0,0,0,0.0);
+	animation-name: headerAnim;
+	animation-duration: 1s;
+	animation-direction: alternate;
 	}
 	.headerfx {
 		position: fixed;
 		top: 0px;
-		animation-name: example;
+		animation-name: headerfx;
 		animation-duration: 1s;
+		animation-direction: alternate;
 		background-color: rgb(247, 248, 250) !important;
 		box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
 	}
-	@keyframes example {
+	@keyframes headerfx {
+		from {top:-100px;}
+		to {top:0px;}
+	}
+	@keyframes headerAnim {
 		from {top:-100px;}
 		to {top:0px;}
 	}
@@ -374,6 +382,7 @@ overflow:visible;
 	font-weight:400;
 	letter-spacing:3px;
 	text-transform:uppercase;
+	margin-top: 24px;
 	}	
 	
 	#mainmenu ul {
@@ -393,11 +402,11 @@ overflow:visible;
 		
 	#mainmenu a {
 	display: inline-block;
-	padding: 25px 0px 25px 20px;
-	line-height: 35px;
-	text-decoration: none;
-	text-align:center;
-	outline:none;
+    padding: 10px 6px;
+    line-height: 15px;
+    text-decoration: none;
+    text-align: center;
+    outline: none;
 	}
 	
 	#mainmenu a,
@@ -409,7 +418,19 @@ overflow:visible;
 	color:#333;
 	}
 	
-	#mainmenu li a:after { float:right; position:relative; font-family:"FontAwesome"; content:"\f111"; font-size:6px; margin-left:20px; margin-top:0px; color:#FAB702; }
+	#mainmenu li a:after {
+		float: right;
+		position: relative;
+		font-family: "FontAwesome";
+		content: "|";
+		font-size: 4px;
+		margin-left: 20px;
+		margin-top: 6px;
+		color: #fff !important;
+		transform: scale(1,5);
+		line-height: 4px;
+		vertical-align: middle;
+	}
 	
 	#mainmenu li:last-child a:after{display:none;}
 	
@@ -455,7 +476,7 @@ overflow:visible;
 	
 
 	#mainmenu li li a {
-	padding: 2px 15px 2px 15px;
+	padding: 13px;
 	background-color: rgb(247, 248, 250);
 	border-top: none;
 	color: #ccc;
@@ -470,11 +491,6 @@ overflow:visible;
 	
 	#mainmenu li li a:after {
 	content:none !important;
-	}
-	
-	#mainmenu li li li a {
-	padding: 2px 15px 2px 15px;
-	background: #222327;
 	}
 	
 	#mainmenu li li a:hover {
@@ -600,13 +616,13 @@ overflow:visible;
 		background-image: url(../images/bg.png);
 		content: "";
 		position: absolute;
-		width: 65%;
+		width: 100%;
 		height: 100%;
 		z-index: 2;
 		top: 0;
-		background-size: auto 100%;
+		background-size:100%;
 		bottom: 0;
-		background-position: right top;
+		background-position: center top;
 		background-repeat: no-repeat;
 	}
 	/* menu toggle animated */
@@ -4977,7 +4993,46 @@ display:table;
 
 
 
+	/* ANIMATION */
+	.wow{
+		visibility: hidden;
+		opacity: 0;
+		transition: 1.3s;
+		transition-delay: 0.2s;
+	}
+	
+	.wow.fadeInLeft{transform: translateX(-150px);}
+	.wow.fadeInUp{transform: translateY(150px);}
+	.wow.fadeInRight{transform: translateX(150px);}
+	.wow.fadeInDown{transform: translateX(-150px);}
+	.wow.delay-06{transition-delay: 0.6s;}
+	.wow.in-view{
+		transform: translate(0px,0px) !important;
+		opacity: 1;
+		visibility: visible;
+	}
 
+	.st-wow{
+		animation-duration: 1s;
+		animation-direction: normal;
+		animation-play-state: running;
+	}
+	
+	.st-wow.fadeInLeft{animation-name: stwowaAnimLeft;}
+	.st-wow.fadeInUp{animation-name: stwowaAnimUp;}
+	.st-wow.fadeInRight{animation-name: stwowaRht;}
+	@keyframes stwowaAnimLeft {
+		from {transform: translateX(-150px); opacity: 0;}
+		to {transform: translateX(0px);opacity: 1;}
+	}
+	@keyframes stwowaAnimUp {
+		from {transform: translateY(150px);}
+		to {transform: translateY(0px);opacity: 1;}
+	}
+	@keyframes stwowaRht {
+		from {transform: translateX(150px);opacity: 0;}
+		to {transform: translateX(0px);opacity: 1;}
+	}
 
 	/* banner */
 
@@ -5003,17 +5058,25 @@ display:table;
 		width: 100%;
 		position: absolute;
 		transition: 0.9s;
-		opacity: 0;
 		visibility: hidden;
 	}
 	.gallery-wrap li.current{
-		opacity: 1;
 		visibility: visible;
 	}
-	.gallery-wrap>li{
+	.gallery-wrap li .bg-img{
+		height: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 150px;
+	}
+	.gallery-wrap li > .bg-img, .gallery-wrap li>.container{
+		visibility: hidden;
+		transition: 0.9s;
+		opacity: 0;
+	}
+	.gallery-wrap li.current > .bg-img, .gallery-wrap li.current > .container{
+		visibility: visible;
+		opacity: 1;
 	}
 	.gallery-wrap>li .banner-content{
 		transition: 2.8s;
@@ -5054,10 +5117,15 @@ display:table;
 		padding-bottom: 30px;
 		color: #333;
 	}
+	.gallery-wrap>li .banner-content .title .id-color{
+		text-transform: initial;
+		font-family: cursive;
+		font-style: oblique;
+	}
 	.gallery-wrap>li.current .banner-content .title{
 		transition: 1s;
 		opacity: 1;
-		letter-spacing: 5px;
+		letter-spacing:-2px;
 		transition-delay: 0.7s;
 	}
 	
