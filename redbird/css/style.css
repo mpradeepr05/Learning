@@ -389,6 +389,16 @@ overflow:visible;
 	padding: 0px 0px;
 	height: 30px;
 	}
+
+	ul#mainmenu>li>ul:before {
+	content: "";
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent #333 transparent;
+	position: absolute;
+	top: -16px;
+	left: 13px;
+	}
 	
 	#mainmenu li {
 	margin: 0px 0px;
@@ -412,8 +422,14 @@ overflow:visible;
 	color:#fff;
 	}
 
-	header.transparent.header-light.headerfx #mainmenu a{
+	header.transparent.header-light.headerfx #mainmenu > li >a{
 	color:#333;
+	}
+	header.headerfx, header.headerfx div#logo{
+		height: 70px;
+	}
+	header.headerfx #mainmenu{
+		margin-top: 18px;
 	}
 	
 	#mainmenu li a:after {
@@ -467,7 +483,7 @@ overflow:visible;
 	font-weight: normal; 
 	}
 
-	#mainmenu li li:nth-child(odd) {
+	#mainmenu li li:nth-child(even) {
 		background: rgba(0, 0, 0, 0.13);
 	}
 	
@@ -502,7 +518,7 @@ overflow:visible;
 	width: 201px;
 	height: auto;
 	position: absolute;
-	top: 44px;
+	top: 41px;
 	left: 0px;
 	z-index: 10;
 	visibility:hidden;
@@ -511,7 +527,6 @@ overflow:visible;
 	box-shadow: 7px 5px 17px 0px rgba(0, 0, 0, 0.34);
     background: #333;
 	}
-	
 	#mainmenu li li {
 	display: block;
 	float: none;
