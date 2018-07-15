@@ -8,7 +8,7 @@
     <meta name="keywords" content="some, text, goes, here, website, keyword">
     <meta name="author" content="">
     
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/pink.css" type="text/css" id="colors">
@@ -16,7 +16,7 @@
 
 <body onload="myFunction()" id="homepage" class="de_light" style="display: block;">
     <div id="loader">
-        <div class="spinner" data-layer="4" style=""><div class="spinner-container"><div class="spinner-rotator"><div class="spinner-left"><div class="spinner-circle"></div></div><div class="spinner-right"><div class="spinner-circle"></div></div></div></div></div>
+        <div class="spinner" data-layer="4"><div class="spinner-container"><div class="spinner-rotator"><div class="spinner-left"><div class="spinner-circle"></div></div><div class="spinner-right"><div class="spinner-circle"></div></div></div></div></div>
     </div>
     <div id="wrapper">
         <!-- header begin -->
@@ -43,7 +43,7 @@
                                 <li><a  onclick='scrollToEele("section-services")' data="section-services">About us</a></li>
                                 <li><a onclick='scrollToEele("section-steps")' data="section-steps">Our Servies</a></li>
                                 <li><a onclick='scrollToEele("section-team")' data="section-team">Team</a></li>
-                                <li><a onclick='scrollToEele("section-portfolio")' data="section-portfolio">Projects</a></li>
+                                <li><a onclick='scrollToEele("section-portfolio")' data="section-portfolio">Portfolio</a></li>
                                 <li><a onclick='scrollToEele("section-contact")' data="section-contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -71,7 +71,7 @@
                             <div class="container">
                                 <div class="banner-content">
                                     <p class="small">OUR EXPERTISE FOR</p>
-                                    <h2>INTERIOR DESIGN</h2>
+                                    <h2 class="fw-1">OUR <span  class="fw-5">EXPERTISE</span> FOR<br> INTERIOR<span  class="fw-5 color-brand"> DESIGN</span></h2>
                                     <a href="#" class="btn-slider">Our Portfolio</a>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                             <div class="container">
                                 <div class="banner-content">
                                     <p class="small">OUR EXPERTISE FOR</p>
-                                    <h2>INTERIOR DESIGN</h2>
+                                    <h2 class="fw-1">OUR <span  class="fw-5">EXPERTISE</span> FOR<br> INTERIOR<span  class="fw-5 color-brand"> DESIGN</span></h2>
                                     <a href="#" class="btn-slider">Our Portfolio</a>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                             <div class="container">
                                 <div class="banner-content">
                                     <p class="small">OUR EXPERTISE FOR</p>
-                                    <h2>INTERIOR DESIGN</h2>
+                                    <h2 class="fw-1">OUR <span  class="fw-5">EXPERTISE</span> FOR<br> INTERIOR<span  class="fw-5 color-brand"> DESIGN</span></h2>
                                     <a href="#" class="btn-slider">Our Portfolio</a>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                             <div class="container">
                                 <div class="banner-content">
                                     <p class="small">OUR EXPERTISE FOR</p>
-                                    <h2>INTERIOR DESIGN</h2>
+                                    <h2 class="fw-1">OUR <span  class="fw-5">EXPERTISE</span> FOR<br> INTERIOR<span  class="fw-5 color-brand"> DESIGN</span></h2>
                                     <a href="#" class="btn-slider">Our Portfolio</a>
                                 </div>
                             </div>
@@ -1368,18 +1368,18 @@
             document.getElementById("wrapper").style.display = "block";
 
 
-            autoSlide();
-            function autoSlide() {
-                var i;
-                var x = document.querySelectorAll(".banner .item");
-                for (i = 0; i < x.length; i++) {
-                    x[i].classList.remove("current"); 
-                }
-                if (index > x.length) {index = 1}
-                x[index-1].classList.add("current");
-                index++;
-                setTimeout(autoSlide, 4000);
-            }
+            // autoSlide();
+            // function autoSlide() {
+            //     var i;
+            //     var x = document.querySelectorAll(".banner .item");
+            //     for (i = 0; i < x.length; i++) {
+            //         x[i].classList.remove("current"); 
+            //     }
+            //     if (index > x.length) {index = 1}
+            //     x[index-1].classList.add("current");
+            //     index++;
+            //     setTimeout(autoSlide, 4000);
+            // }
         }
 
     </script>
