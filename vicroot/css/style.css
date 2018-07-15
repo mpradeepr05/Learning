@@ -4133,6 +4133,22 @@ display:table;
 	}
 	}
 
+	/* service step */
+	#section-steps{
+		position: relative;
+		overflow: hidden;
+	}
+	#section-steps:before{
+		background-image: url(http://www.themenesia.com/themeforest/archi-light/images-slider/wide4.jpg);
+		content: "";
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		filter: blur(4px);
+		transform: scale(1.2);
+	}
 
 
 
