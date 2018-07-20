@@ -1,8 +1,4 @@
 
-html{
-background:#000000 !important;
-}
-
 body {
 	display:none;
 	font-family: 'Roboto',Arial, Helvetica, sans-serif;
@@ -4301,6 +4297,7 @@ display:table;
 		z-index: 9999;
 		background: #f6f6f6;
 	}
+
 	#loader.complete{
 		visibility: hidden;
 		opacity: 0;
@@ -4524,6 +4521,31 @@ display:table;
 			transform: rotate(-130deg)
 		}
 	}
-	#wrapper{
-		display: none;
-	}
+
+
+	/* css slider */
+	#slideshow {
+		overflow: hidden;
+		height: 510px;
+		/* width: 728px; */
+		margin: 0 auto;
+	  }
+	  
+	  .slide-wrapper {
+		width: 2912px;
+		-webkit-animation: slide 10s ease infinite;
+	  }
+	  
+	  .slide {
+		float: left;
+		height: 510px;
+		width: 728px;
+	  }
+	  
+	  @-webkit-keyframes slide {
+		20% {margin-left: 0px;}
+		30% {margin-left: -728px;}
+		60% {margin-left: -728px;}
+		70% {margin-left: -1456px;}
+		90% {margin-left: -1456px;}
+	  }

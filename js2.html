@@ -10,22 +10,28 @@
 
 <body>
    <script>
-       var array = [1,1,2,3,1,4,4,6,6,3];
-       var blArray = [];
+        var array = [1,7,1,2,3,1,4,4,6,6,3];
+        
+        var blArray = {};
+        
         for (let i = 0; i < array.length; i++) {
-            for (let j = 1; j < array.length; j++) {
-                console.log("i",i);
-                if (array[i] === array[j] && blArray.indexOf(array[i])==-1) {
-                    console.log("true");
-                    document.write(array[i]);
-                    blArray.push(array[i])
-                    console.log("blank Array "+blArray);
-                }
-                else{
-                    console.log("false");
-                }
+            if (!blArray[array[i]]){
+                console.log(array[i]);
+                // console.log(blArray[i]);
+                blArray[array[i]] = 1;
+                // console.log(blArray)
             }
         }
+
+
+        // var array = [1,1,2,3,1,4,4,6,6,3];
+        // var blArray = [];
+        // for (let i = 0; i < array.length; i++) {
+        //     if (blArray.indexOf(array[i])===-1){
+        //         console.log(array[i]);
+        //         blArray.push(array[i])
+        //     }
+        // }
     </script>
 </body>
 

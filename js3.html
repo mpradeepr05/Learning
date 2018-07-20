@@ -26,7 +26,7 @@
             position: relative;
             display: inline;
             float: left;
-            height: 274px;
+            height: 374px;
             width: 273px;
             margin-left: 0px;
             -webkit-perspective: 450;
@@ -51,21 +51,21 @@
             background-repeat: no-repeat;
             background-position: center center;
             width: 137px;
-            height: 274px;
+            height: 374px;
             position: absolute;
             box-sizing: border-box;
             border-radius: 3px;
             box-shadow: 0 0 0 10px rgba(255, 255, 255, .0) inset;
-            transition: 3.3s transform linear;
+            transition: 7.3s ease;
             transform-origin: left;
             cursor: pointer;
             left: 0;
         }
 
         .open .thumb {
-            transform: rotateY(90deg);
+            transform: rotateY(100deg);
             /* transform-origin: 8px; */
-            transition: 4.5s linear;
+            /* transition: 4.5s linear; */
         }
         .thumb.sec{
             transform: rotateY(180deg);
@@ -73,7 +73,7 @@
             left: inherit;
         }
         .open .thumb.sec{
-            transform: rotateY(90deg);
+            transform: rotateY(80deg);
         }
         .lock {
             background: url(lock.png);
@@ -113,23 +113,13 @@
         </div>
     </div>
     <script>
-        // var x = document.getElementById("myAudio");
-        // var door = document.getElementsByClassName("perspective")[0];
-        // function openDoor() {
-        //     door.classList.add("open");
-        //     // x.play();
-        // }
-
-        function isPalindrome(str) {
-            if (str.length === 0) {
-                return true;
-            }
-            if (str[0] !== str[str.length-1]) {
-                return false;
-            }
-            return isPalindrome(str.slice(1,str.length-1));
+        var x = document.getElementById("myAudio");
+        var door = document.getElementsByClassName("perspective")[0];
+        function openDoor() {
+            door.classList.add("open");
+            // x.play();
         }
-        isPalindrome("ABCBA");
+
     </script>
 </body>
 
