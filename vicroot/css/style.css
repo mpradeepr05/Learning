@@ -495,7 +495,7 @@ overflow:visible;
 
 
 /* section */
-	section{padding:60px 0;}
+	section{padding:60px 0; position: relative;}
 	section{background:#18191b;}
 
 	.fullwidthbanner{
