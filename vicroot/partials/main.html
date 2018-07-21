@@ -1,0 +1,698 @@
+<!-- revolution slider begin -->
+<section id="home-slider" class="fullwidthbanner">
+    <div class="banner">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="banner-content">
+                    <!-- <h4>Slide {{slide.id}}</h4> -->
+                    <!-- <p>{{slide.text}}</p> -->
+                    <p class="small">OUR EXPERTISE FOR</p>
+                    <h2 class="fw-1">OUR <span  class="fw-5">EXPERTISE</span> FOR<br> INTERIOR<span  class="fw-5 color-brand"> DESIGN</span></h2>
+                    <br>
+                    <a href="#" class="btn-slider">Our Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- revolution slider close -->
+<!-- section begin -->
+<section id="section-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp">
+                <h1>WELCOME TO VICROOT</h1>
+                <div class="separator">
+                    <span>
+                        <i class="fa fa-circle"></i>
+                    </span>
+                </div>
+                <div class="spacer-single"></div>
+            </div>
+        </div>
+            <div id="slideshow" class="col-md-6 wow fadeInLeft">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 wow fadeInUp delay-06">
+                <h3>
+                    <span class="color-brand">Office</span> Design</h3>
+                <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section close -->
+
+
+<!-- section begin -->
+<section id="section-steps" class="text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp">
+                <h1>Our Services</h1>
+                <div class="separator">
+                    <span>
+                        <i class="fa fa-circle"></i>
+                    </span>
+                </div>
+                <div class="spacer-single"></div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="de_tab tab_steps wow fadeInUp">
+                    <ul class="de_nav">
+                        <li class="wow fadeIn" ng-class="{active:ourService == 1}">
+                            <img src="" alt="">
+                            <span ng-click="ourService = 1">Meet &amp; Agree</span>
+                            <div class="v-border"></div>
+                        </li>
+                        <li class="wow fadeIn" ng-class="{active:ourService == 2}">
+                            <span ng-click="ourService = 2">Idea &amp; Concept</span>
+                            <div class="v-border"></div>
+                        </li>
+                        <li class="wow fadeIn" ng-class="{active:ourService == 3}">
+                            <span ng-click="ourService = 3">Design &amp; Create</span>
+                            <div class="v-border"></div>
+                        </li>
+                        <li class="wow fadeIn" ng-class="{active:ourService == 4}">
+                            <span ng-click="ourService = 4">Build &amp; Install</span>
+                            <div class="v-border"></div>
+                        </li>
+                    </ul>
+                    <div class="de_tab_content wow fadeInUp delay-06" ng-init="ourService = 1">
+                        <div class="row" ng-show="ourService == 1">
+                            <div id="slideshow" class="col-md-6">
+                                <img src="//themenesia.com/themeforest/archi-light/images-slider/wide1.jpg" style="max-width: 100%;">
+                            </div>
+                
+                            <div class="col-md-6">
+                                <h3>
+                                    <span class="color-brand">Meet</span> Agree</h3>
+                                <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row" ng-show="ourService == 2">
+                            <div id="slideshow" class="col-md-6">
+                                <img src="//themenesia.com/themeforest/archi-light/images-slider/wide1.jpg" style="max-width: 100%;">
+                            </div>
+                
+                            <div class="col-md-6">
+                                <h3>
+                                    <span class="color-brand">Idea</span> Concept</h3>
+                                <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row" ng-show="ourService == 3">
+                            <div id="slideshow" class="col-md-6">
+                                <img src="//themenesia.com/themeforest/archi-light/images-slider/wide1.jpg" style="max-width: 100%;">
+                            </div>
+                
+                            <div class="col-md-6">
+                                <h3>
+                                    <span class="color-brand">Design</span> Create</h3>
+                                <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row" ng-show="ourService == 4">
+                            <div id="slideshow" class="col-md-6">
+                                <img src="//themenesia.com/themeforest/archi-light/images-slider/wide1.jpg" style="max-width: 100%;">
+                            </div>
+                
+                            <div class="col-md-6">
+                                <h3>
+                                    <span class="color-brand">Build</span> Install</h3>
+                                <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section close -->
+<!-- section begin -->
+<section id="section-portfolio" class="no-bottom" aria-label="section-portfolio">
+    <h1>What We Do</h1>
+    <div class="separator">
+        <span>
+            <i class="fa fa-circle"></i>
+        </span>
+    </div>
+    <div class="spacer-single"></div>
+    <div id="gallery" class="gallery full-gallery de-gallery pf_full_width wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; position: relative; height: 428px;">
+
+        <!-- gallery item -->
+        <div class="item residential" style="position: absolute; left: 0px; top: 0px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-1.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Eco Green Interior</span>
+                        </span>
+                    </span>
+                </a>
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(1).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item hospitaly" style="position: absolute; left: 321px; top: 0px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-2.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Modern Elegance Suite</span>
+                        </span>
+                    </span>
+                </a>
+
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(2).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item hospitaly" style="position: absolute; left: 643px; top: 0px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-3.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Apartment Renovation</span>
+                        </span>
+                    </span>
+                </a>
+
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(3).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item residential" style="position: absolute; left: 965px; top: 0px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-youtube.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Youtube Video</span>
+                        </span>
+                    </span>
+                </a>
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(4).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item office" style="position: absolute; left: 0px; top: 214px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-vimeo.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Vimeo Video</span>
+                        </span>
+                    </span>
+                </a>
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(5).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item commercial" style="position: absolute; left: 321px; top: 214px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Restaurant In Texas</span>
+                        </span>
+                    </span>
+                </a>
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(6).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item residential" style="position: absolute; left: 643px; top: 214px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-youtube.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Summer House</span>
+                        </span>
+                    </span>
+                </a>
+
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(7).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+        <!-- gallery item -->
+        <div class="item office" style="position: absolute; left: 965px; top: 214px;">
+            <div class="picframe" style="height: 214px;">
+                <a class="simple-ajax-popup-align-top" href="project-details-vimeo.html">
+                    <span class="overlay" style="opacity: 0;">
+                        <span class="pf_text">
+                            <span class="project-name">Office On Space</span>
+                        </span>
+                    </span>
+                </a>
+
+                <img src="http://www.themenesia.com/themeforest/archi-light/images/portfolio/pf%20(8).jpg" alt="" style="width: 100%; height: auto;">
+            </div>
+        </div>
+        <!-- close gallery item -->
+
+    </div>
+
+    <div id="loader-area">
+        <div class="project-load"></div>
+    </div>
+</section>
+<!-- section close -->
+
+
+<!-- section begin -->
+<section id="view-all-projects" class="call-to-action bg-color text-center" data-speed="5" data-type="background" aria-label="view-all-projects"
+    style="background-position: 50% 0px;">
+    <a href="projects.html" class="btn btn-line-black btn-big">View All Projects</a>
+</section>
+<!-- logo carousel section close -->
+<!-- section begin -->
+<section id="section-fun-facts">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp">
+                <h1>Fun Facts</h1>
+                <div class="separator">
+                    <span>
+                        <i class="fa fa-circle"></i>
+                    </span>
+                </div>
+                <div class="spacer-single"></div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="col-md-3 wow fadeIn" data-wow-delay="0">
+                <div class="de_count">
+                    <i class="icon-alarmclock wow zoomIn"></i>
+                    <h3 class="timer" data-to="2350" data-speed="2500">0</h3>
+                    <span>Hours of Works</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 wow fadeIn">
+                <div class="de_count">
+                    <i class="icon-tools wow zoomIn" data-wow-delay=".25s"></i>
+                    <h3 class="timer" data-to="128" data-speed="2500">0</h3>
+                    <span>Projects Complete</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 wow fadeIn">
+                <div class="de_count">
+                    <i class="icon-piechart wow zoomIn"></i>
+                    <h3 class="timer" data-to="750" data-speed="2500">0</h3>
+                    <span>Slice of Pizza</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
+                <div class="de_count">
+                    <i class="icon-wine wow zoomIn" data-wow-delay=".75s"></i>
+                    <h3 class="timer" data-to="520" data-speed="2500">0</h3>
+                    <span>Cups of Coffee</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- section close -->
+<!-- section begin -->
+<section id="section-contact" class="no-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center wow fadeInUp">
+                <h1>Contact Us</h1>
+                <div class="separator">
+                    <span>
+                        <i class="fa fa-circle"></i>
+                    </span>
+                </div>
+                <div class="spacer-single"></div>
+            </div>
+
+            <div class="col-md-8 wow fadeInLeft">
+                <form name="contactForm" id="contact_form" method="post" action="email.php">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div id="name_error" class="error">Please enter your name.</div>
+                            <div>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+                            </div>
+
+                            <div id="email_error" class="error">Please enter your valid E-mail ID.</div>
+                            <div>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Your Email">
+                            </div>
+
+                            <div id="phone_error" class="error">Please enter your phone number.</div>
+                            <div>
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="message_error" class="error">Please enter your message.</div>
+                            <div>
+                                <textarea name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <p id="submit">
+                                <input type="submit" id="send_message" value="Submit Form" class="btn btn-line">
+                            </p>
+                            <div id="mail_success" class="success">Your message has been sent successfully.</div>
+                            <div id="mail_fail" class="error">Sorry, error occured this time sending your message.</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4 wow fadeInRight">
+
+                <div class="widget_text">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <span>100 Mainstreet Center, Sydney</span>
+                        <span>
+                            <strong>Phone:</strong>(208) 333 9296</span>
+                        <span>
+                            <strong>Fax:</strong>(208) 333 9298</span>
+                        <span>
+                            <strong>Email:</strong>
+                            <a href="mailto:contact@example.com">contact@example.com</a>
+                        </span>
+                        <span>
+                            <strong>Web:</strong>
+                            <a href="#test">http://example.com</a>
+                        </span>
+                        <span>
+                            <strong>Open</strong>Sunday - Friday 08:00 - 18:00</span>
+                    </address>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer-double"></div>
+
+    <div id="map" style="position: relative; overflow: hidden;">
+        <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+            <div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;">
+                <div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;">
+                    <div style="z-index: 1; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);">
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                                <div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -96, -75);">
+                                    <div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                    <div style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px;">
+                                        <div style="width: 256px; height: 256px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+                                <div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -96, -75);">
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: -256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 256px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 0px;"></div>
+                                    <div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: -256px;"></div>
+                                </div>
+                            </div>
+                            <div style="width: 85px; height: 85px; overflow: hidden; position: absolute; left: -43px; top: -85px; z-index: 0;">
+                                <img alt="" src="images/map-marker.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 85px; height: 85px; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                            </div>
+                        </div>
+                        <div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+                            <div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -96, -75);">
+                                <div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26108!3i16965!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=23840"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26107!3i16965!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=118286"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26107!3i16964!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=32928"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26108!3i16964!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=69553"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26109!3i16964!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=106178"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26109!3i16965!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=60465"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26109!3i16966!4i256!2m3!1e0!2sm!3i426128264!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=52330"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26108!3i16966!4i256!2m3!1e0!2sm!3i426128264!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=15705"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26107!3i16966!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=72573"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26106!3i16966!4i256!2m3!1e0!2sm!3i426128312!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=102347"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26106!3i16965!4i256!2m3!1e0!2sm!3i426128312!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=16989"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26106!3i16964!4i256!2m3!1e0!2sm!3i426128312!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=62702"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26110!3i16964!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=56027"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26110!3i16965!4i256!2m3!1e0!2sm!3i426128276!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=10314"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26110!3i16966!4i256!2m3!1e0!2sm!3i426128264!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=2179"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26105!3i16966!4i256!2m3!1e0!2sm!3i426128312!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=65722"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26105!3i16965!4i256!2m3!1e0!2sm!3i426128312!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=111435"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                                <div style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px;">
+                                    <img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i26105!3i16964!4i256!2m3!1e0!2sm!3i426128312!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5oOiNmZjFhMDB8cC5pbDp0cnVlfHAuczotMTAwfHAubDozM3xwLmc6MC41LHMudDo2fHMuZTpnfHAuYzojZmYyRDMzM0M!4e0!23i1301875&amp;token=26077"
+                                        style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;">
+                        <p class="gm-style-pbt"></p>
+                    </div>
+                    <div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;">
+                        <div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div>
+                        <div style="z-index: 4; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);">
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;">
+                                <div class="gmnoprint" title="Lorem Ipsum" style="width: 85px; height: 85px; overflow: hidden; position: absolute; opacity: 0.01; cursor: pointer; touch-action: none; left: -43px; top: -85px; z-index: 0;">
+                                    <img alt="" src="images/map-marker.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 85px; height: 85px; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                                </div>
+                            </div>
+                            <div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <iframe frameborder="0" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"
+                    src="about:blank"></iframe>
+                <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+                    <a target="_blank" href="https://maps.google.com/maps?ll=-6.373091,106.835175&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3"
+                        title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;">
+                        <div style="width: 66px; height: 26px; cursor: pointer;">
+                            <img alt="" src="https://maps.gstatic.com/mapfiles/api-3http://www.themenesia.com/themeforest/archi-light/images/google_white5.png" draggable="false"
+                                style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;">
+                        </div>
+                    </a>
+                </div>
+                <div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 490px; top: 160px;">
+                    <div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div>
+                    <div style="font-size: 13px;">Map data ©2018 Google</div>
+                    <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;">
+                        <img alt="" src="https://maps.gstatic.com/mapfiles/api-3http://www.themenesia.com/themeforest/archi-light/images/mapcnt6.png" draggable="false"
+                            style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+                    </div>
+                </div>
+                <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 166px; bottom: 0px; width: 121px;">
+                    <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;">
+                        <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                            <div style="width: 1px;"></div>
+                            <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                        </div>
+                        <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                            <a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a>
+                            <span>Map data ©2018 Google</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+                    <div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2018 Google</div>
+                </div>
+                <div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 95px; bottom: 0px;">
+                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                        <div style="width: 1px;"></div>
+                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                    </div>
+                    <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                        <a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a>
+                    </div>
+                </div>
+                <button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view"
+                    type="button" style="background: none rgb(255, 255, 255); border: 0px; margin: 10px 14px; padding: 0px; position: absolute; cursor: pointer; user-select: none; width: 25px; height: 25px; overflow: hidden; display: none; top: 0px; right: 0px;">
+                    <img alt="" src="https://maps.gstatic.com/mapfiles/api-3http://www.themenesia.com/themeforest/archi-light/images/sv9.png" draggable="false" class="gm-fullscreen-control"
+                        style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;">
+                </button>
+                <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+                    <div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+                        <div style="width: 1px;"></div>
+                        <div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div>
+                    </div>
+                    <div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+                        <a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google"
+                            href="https://www.google.com/maps/@-6.373091,106.835175,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3"
+                            style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section close -->

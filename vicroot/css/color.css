@@ -48,7 +48,8 @@ section.call-to-action,
 a.btn-custom,
 .owl-custom-nav .btn-next:before,
 .owl-custom-nav .btn-prev:before,
-#mainmenu ul li:hover > a
+#mainmenu ul li:hover > a,
+.carousel-indicators .active
 {
 	background-color:#FE4365;
 }
@@ -93,7 +94,9 @@ address span strong,
 .de_form input[type="checkbox"]:checked + label:before,
 #mainmenu li:hover > a,
 #mainmenu li.active > a,
-.expand h4:after
+.expand h4:after,
+#mainmenu li a:after,
+.separator .fa-circle:after
 {
 	color:#FE4365;
 }
@@ -115,37 +118,13 @@ address span strong,
 .product img:hover,
 #contact_form input[type=text]:focus,#contact_form textarea:focus, #search:focus,
 #contact_form .de_light input[type=text]:focus, #contact_form .de_lighttextarea:focus, #contact_form .de_light #search:focus,
-.form-transparent input[type=text]:focus, .form-transparent textarea:focus, .form-transparent input[type=email]:focus
+.form-transparent input[type=text]:focus, .form-transparent textarea:focus, .form-transparent input[type=email]:focus,
+.carousel-indicators .active 
 {
 
 	border-color:#FE4365;
 }
 
-.box-fx .inner,
-.dark .box-fx .inner,
-.blog-list img,
-.arrow-up
-{
-	border-bottom-color:#FE4365;
-}
-
-.arrow-down{
-	border-top-color:#FE4365;
-}
-
-.callbacks_nav {
-	background-color:#FE4365;
-}
-
-
 .de_tab .de_nav li span {
 border-top: 3px solid #FE4365;
-}
-
-.feature-box-big-icon i:after {
-border-color: #FE4365 transparent; /*same colour as the lower of the bubble's gradient*/
-}
-
-.de_review li.active img{
-	border:solid 4px #FE4365;
 }
