@@ -12,7 +12,7 @@ app.controller('MainCtrl', function($scope, $route, $location) {
     })
 
 
-    $scope.myInterval = 5000;
+    $scope.myInterval = 50;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [];
