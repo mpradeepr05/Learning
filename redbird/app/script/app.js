@@ -19,9 +19,9 @@ app.controller('MainCtrl', function($scope, $route, $location) {
     var currIndex = 0;
 
     $scope.addSlide = function() {
-        var newWidth = "wide" + parseInt(slides.length+1);
+        var newWidth = parseInt(slides.length+1);
         slides.push({
-        image: '//themenesia.com/themeforest/archi-light/images-slider/' + newWidth + '.jpg',
+        image: 'images/' + newWidth + '.jpg',
         text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
         id: currIndex++
         });
