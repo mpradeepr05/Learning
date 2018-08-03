@@ -14,8 +14,19 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/codekraft-studio/angular-page-loader/master/dist/angular-page-loader.css" media="screen" title="no title" charset="utf-8">
 
     <style>
-        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-            display: none !important;
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: block !important;
+        }
+        page-loader{
+            opacity: 1;
+            transition: 0.3s;
+            transition-delay: 0.2s;
+            visibility: visible;
+            background: #fff;
+        }
+        page-loader.ng-hide:not(.ng-hide-animate){
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -145,7 +156,7 @@
                         <h3>Contact Us</h3>
                         <div class="widget widget-address">
                             <address>
-                                <span>100 Mainstreet Center, Sydney</span>
+                                <span>100 New delhi Center, HOUJH</span>
                                 <span><strong>Phone:</strong>(208) 333 9296</span>
                                 <span><strong>Fax:</strong>(208) 333 9298</span>
                                 <span><strong>Email:</strong><a href="mailto:contact@redbird-interior.com">contact@redbird-interior.com</a></span>
@@ -160,7 +171,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            &copy; Copyright 2018 - redbird Interior Design Template by <span class="id-color">Designesia</span>
+                            &copy; Copyright 2018 -   <span class="id-color">redbird</span>
                         </div>
                         <div class="col-md-6 text-right">
                             <div class="social-icons">

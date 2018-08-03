@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+
+
+
+
+.spinner {
+  z-index: 2; }
+
+.spinner {
+  -webkit-animation: spinnerAn 2s linear infinite;
+  animation: spinnerAn 2s linear infinite; }
+
+.spinner {
+  -webkit-animation: spinnerAn 2s linear infinite;
+  animation: spinnerAn 2s linear infinite; }
+
+  @-webkit-keyframes spinnerAn {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spinnerAn {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+
+
+    .spinner circle {
+  stroke-dasharray: 1,150;
+  /* 1%, 101% circumference */
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  -webkit-animation: circleAnm 1.5s ease-in-out infinite;
+  animation: circleAnm 1.5s ease-in-out infinite;
+  stroke: #e40000; }
+
+  @-webkit-keyframes circleAnm {
+  0% {
+    stroke-dasharray: 1,150;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -124; } }
+@keyframes circleAnm {
+  0% {
+    stroke-dasharray: 1,150;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -124; } }
+
+    </style>
+</head>
+
+<body>
+    <svg class="spinner" width="65" height="65" viewBox="0 0 44 44">
+        <circle cx="22" cy="22" r="20" fill="none" stroke-width="2"></circle>
+    </svg>
+</body>
+
+</html>
