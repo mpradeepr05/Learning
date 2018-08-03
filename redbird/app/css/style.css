@@ -4868,6 +4868,30 @@ display:table;
 		opacity: 0;
 		visibility: hidden;
 	}
+
+	.banner .carousel-inner .item:not(:first-child) img{
+		transform:translate(20%, -10%)
+	}
+
+	.banner .carousel-inner .item:first-child img{
+		animation-duration: 6s;
+		animation-timing-function:cubic-bezier(0, 0.82, 0.34, 0.75);
+		transform:translate(20%, -20%) scale(1)
+
+	}
+	.banner .carousel-inner .item:first-child.active img{
+		animation-name: bannerSlider;
+		animation-duration: 6s;
+		animation-timing-function:cubic-bezier(0, 0.82, 0.34, 0.75);
+		transform:translate(20%, -20%) scale(1)
+	}
+
+	@keyframes bannerSlider {
+		0% {transform:translate(0, 10%) scale(1.4);}
+		100% {
+			transform:translate(20%, -20%) scale(1);
+		}
+	}
 	
 	.banner .carousel-inner .item.active .banner-content,
 	.banner .carousel-inner .item.active img{
