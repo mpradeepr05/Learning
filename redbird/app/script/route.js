@@ -12,5 +12,17 @@ app.config(['$routeProvider',
       when('/about', {
         templateUrl: 'partials/about.html',
 	    controller: 'DetailsCtrl'
+      }).
+      when('/sales-spare', {
+        templateUrl: 'partials/sales-spare.html',
+	    controller: 'DetailsCtrl'
+      }).
+      when('/contact', {
+        templateUrl: 'partials/contact.html',
+	    controller: 'DetailsCtrl'
+      }).
+      when('/consulting', {
+        templateUrl: 'partials/consulting.html',
+	    controller: 'DetailsCtrl'
       })
 }]);
