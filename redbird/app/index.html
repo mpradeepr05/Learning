@@ -33,7 +33,7 @@
 
 <body ng-cloak id="homepage">
     <page-loader></page-loader>
-    <main  id="wrapper" ng-controller="MainCtrl">
+    <main  id="wrapper">
         <!-- header begin -->
         <header class="transparent header-light" id="header">
             <div class="container">
@@ -41,7 +41,7 @@
                     <div class="col-md-12">
                         <!-- logo begin -->
                         <div id="logo">
-                            <a href="index.html">
+                            <a href="#index.html">
                                 <img class="logo" src="images/logo.png" alt="">
                             </a>
                         </div>
@@ -54,21 +54,13 @@
                         <!-- mainmenu begin -->
                         <nav>
                             <ul id="mainmenu">
-                                <li class="active"><a href="index.html"><span></span>Home<span></span></a>
+                                <li><a href="#index.html"><span></span>Home<span></span></a></li>
+                                <li><a><span></span>Projects<span></span></a>
                                     <ul>
-										<li><a href="#sample">Multipurpose</a></li>
-										<li><a href="index-portfolio-minimal.html">Portfolio Minimal</a></li>
-										<li><a href="index-fresh.html">Fresh</a></li>
+                                        <li><a href="#!/detail">Multipurpose</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="projects.html"><span></span>Projects<span></span></a></li>
-                                <li><a href="services.html"><span></span>Services<span></span></a>
-                                    <ul>
-                                        <li><a href="service-1.html">Residential Design</a></li>
-                                        <li><a href="service-2.html">Hospitaly Design</a></li>
-                                        <li><a href="services-style-2.html">New All Services</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="services.html"><span></span>Services<span></span></a></li>
                                 <li><a href="about.html"><span></span>About Us<span></span></a></li>
                                 <li><a href="contact.html"><span></span>Contact<span></span></a></li>
                             </ul>
@@ -83,7 +75,7 @@
         <!-- header close -->
 
         <!-- content begin -->
-        <div id="content" ng-view class="no-bottom no-top">
+        <div ng-view class="content">
         </div>
 
         <!-- footer begin -->
