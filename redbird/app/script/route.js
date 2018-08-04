@@ -8,5 +8,9 @@ app.config(['$routeProvider',
       when('/detail', {
         templateUrl: 'partials/details.html',
 	    controller: 'DetailsCtrl'
+      }).
+      when('/about', {
+        templateUrl: 'partials/about.html',
+	    controller: 'DetailsCtrl'
       })
 }]);
